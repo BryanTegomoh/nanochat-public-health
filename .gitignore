@@ -4,3 +4,12 @@ __pycache__/
 rustbpe/target/
 dev-ignore/
 .claude/
+
+# AI-generated and development documentation
+SURVEILLANCE_README.md
+QUICKSTART_SURVEILLANCE.md
+SURVEILLANCE_SUMMARY.md
+CLOUD_TRAINING_GUIDE.md
+NEXT_STEPS.md
+PROJECT_SUMMARY.md
+TROUBLESHOOTING.md

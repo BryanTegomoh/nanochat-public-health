@@ -1,8 +1,8 @@
-# nanochat-public-health 🦠
+# nanochat-public-health
 
 ![nanochat logo](dev/nanochat.png)
 
-> **Public Health Surveillance Specialization** of [nanochat](https://github.com/karpathy/nanochat) by Andrej Karpathy
+> Public Health Surveillance Specialization of [nanochat](https://github.com/karpathy/nanochat) by Andrej Karpathy
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -12,79 +12,62 @@
 
 ---
 
-## 🎯 What is This?
+## What is This?
 
-This is a **specialized version of nanochat** fine-tuned for **public health surveillance applications**. It provides AI assistance for:
+This is a specialized version of nanochat fine-tuned for public health surveillance applications. It provides AI assistance for:
 
-- 🔍 **Outbreak Detection** - Identify disease outbreaks from case data
-- 📊 **Trend Analysis** - Analyze epidemiological patterns
-- ⚠️ **Risk Assessment** - Evaluate population health threats
-- 📝 **Surveillance Reporting** - Generate professional surveillance reports
-- 💉 **Vaccination Monitoring** - Track immunization program coverage
-- 📈 **Data Interpretation** - Understand surveillance metrics (R₀, incidence rates, etc.)
-- 🔬 **Syndromic Surveillance** - Early outbreak detection systems
-- 🔗 **Contact Tracing** - Disease contact tracing protocols
-- 🐾 **Zoonotic Surveillance** - Animal-human disease monitoring
-- 🌍 **Global Health Security** - International outbreak coordination
+- Outbreak Detection - Identify disease outbreaks from case data
+- Trend Analysis - Analyze epidemiological patterns
+- Risk Assessment - Evaluate population health threats
+- Surveillance Reporting - Generate professional surveillance reports
+- Vaccination Monitoring - Track immunization program coverage
+- Data Interpretation - Understand surveillance metrics (R₀, incidence rates, etc.)
+- Syndromic Surveillance - Early outbreak detection systems
+- Contact Tracing - Disease contact tracing protocols
+- Zoonotic Surveillance - Animal-human disease monitoring
+- Global Health Security - International outbreak coordination
 
-**Target users:** Epidemiologists, public health officials, disease surveillance professionals
+Target users: Epidemiologists, public health officials, disease surveillance professionals
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Try It Now (No Setup)
 
-**Online Demo:** Try the base nanochat model at [nanochat.karpathy.ai](https://nanochat.karpathy.ai/)
-*(Note: This is the general model, not surveillance-specialized)*
+Online Demo: Try the base nanochat model at [nanochat.karpathy.ai](https://nanochat.karpathy.ai/)
+(Note: This is the general model, not surveillance-specialized)
 
 ### Option 2: Train Your Surveillance Model
 
-**Prerequisites:**
+Prerequisites:
 - Access to GPU (cloud or local)
 - Budget: $40-$400 depending on approach
 - Time: 15-100 hours depending on GPU
 
-**Steps:**
+Steps:
 
-1. **Clone this repository:**
+1. Clone this repository:
    ```bash
    git clone https://github.com/BryanTegomoh/nanochat-public-health.git
    cd nanochat-public-health
    ```
 
-2. **Verify setup:**
+2. Verify setup:
    ```bash
    python -m scripts.test_surveillance_setup
    ```
 
-3. **Choose your training approach:**
-   - 🆓 **Free (Google Colab):** See [CLOUD_TRAINING_GUIDE.md](CLOUD_TRAINING_GUIDE.md)
-   - ⚡ **Fast (Lambda Labs 8xH100):** $360, 15-20 hours - **Recommended**
-   - 💰 **Budget (RunPod RTX 4090):** $40-60, 100 hours
-
-4. **Read the guide and start:**
-   - **[NEXT_STEPS.md](NEXT_STEPS.md)** ← **START HERE**
+3. Choose your training approach:
+   - Fast (Lambda Labs 8xH100): $360, 15-20 hours - Recommended
+   - Budget (RunPod RTX 4090): $40-60, 100 hours
+   - Free (Google Colab): T4 GPU, 2-3 days
 
 ---
 
-## 📚 Documentation
+## What's Included
 
-| Document | Purpose |
-|----------|---------|
-| **[NEXT_STEPS.md](NEXT_STEPS.md)** ⭐ | Quick decision guide - "What do I do now?" |
-| **[CLOUD_TRAINING_GUIDE.md](CLOUD_TRAINING_GUIDE.md)** | Step-by-step cloud GPU training instructions |
-| **[QUICKSTART_SURVEILLANCE.md](QUICKSTART_SURVEILLANCE.md)** | Copy-paste commands for quick reference |
-| **[SURVEILLANCE_README.md](SURVEILLANCE_README.md)** | Complete technical documentation |
-| **[SURVEILLANCE_SUMMARY.md](SURVEILLANCE_SUMMARY.md)** | Overview & status checklist |
-| **[PROJECT_SUMMARY.md](PROJECT_SUMMARY.md)** | Comprehensive project overview |
-| **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** | Common issues and solutions |
-
----
-
-## 🎓 What's Included
-
-### 📊 Dataset (5,000 Examples)
+### Dataset (5,000 Examples)
 High-quality synthetic surveillance conversations covering 10 categories:
 - Outbreak detection (750 examples)
 - Epidemiological trend analysis (750 examples)
@@ -97,27 +80,27 @@ High-quality synthetic surveillance conversations covering 10 categories:
 - Zoonotic surveillance (250 examples)
 - Global health coordination (250 examples)
 
-### 🚂 Training Pipeline
-- **Specialized training:** `scripts/surveillance_sft.py`
-- **Optimized hyperparameters:** Conservative learning rates for medical domain
-- **Data mixture:** 4,000 surveillance + 2,000 general conversation examples
+### Training Pipeline
+- Specialized training: `scripts/surveillance_sft.py`
+- Optimized hyperparameters: Conservative learning rates for medical domain
+- Data mixture: 4,000 surveillance + 2,000 general conversation examples
 
-### 📏 Evaluation System
-- **Comprehensive metrics:** ROUGE scores, concept coverage, structure quality, actionability
-- **Per-category analysis:** Performance breakdown by surveillance type
-- **Sample outputs:** Manual review support
+### Evaluation System
+- Comprehensive metrics: ROUGE scores, concept coverage, structure quality, actionability
+- Per-category analysis: Performance breakdown by surveillance type
+- Sample outputs: Manual review support
 
-### 💬 Chat Interfaces
-- **CPU-compatible:** `scripts/surveillance_chat_cpu.py` - Run without GPU
-- **GPU version:** `scripts/surveillance_chat.py` - Faster inference
+### Chat Interfaces
+- CPU-compatible: `scripts/surveillance_chat_cpu.py` - Run without GPU
+- GPU version: `scripts/surveillance_chat.py` - Faster inference
 
-### ✅ Testing & Verification
-- **Setup validation:** `scripts/test_surveillance_setup.py`
-- **All tests passing:** Dataset, task loader, training scripts verified
+### Testing & Verification
+- Setup validation: `scripts/test_surveillance_setup.py`
+- All tests passing: Dataset, task loader, training scripts verified
 
 ---
 
-## 💡 Example Use Cases
+## Example Use Cases
 
 ### Outbreak Detection
 ```
@@ -153,20 +136,20 @@ A: R₀ = 3.5 indicates each infected person causes ~3.5 secondary
 
 ---
 
-## 💰 Training Costs
+## Training Costs
 
 | Approach | GPU | Time | Cost | Quality |
 |----------|-----|------|------|---------|
 | **Google Colab** | T4 (free) | 2-3 days | $0 | Good |
 | **RunPod** | RTX 4090 | 100 hours | $40-60 | Good |
 | **Lambda Labs** | 1x H100 | 60-80 hours | $120-180 | Very Good |
-| **Lambda Labs** | 8x H100 | 15-20 hours | **$300-400** | Excellent ⭐ |
+| **Lambda Labs** | 8x H100 | 15-20 hours | **$300-400** | Excellent |
 
-**Recommended:** Lambda Labs 8xH100 for production-quality model
+Recommended: Lambda Labs 8xH100 for production-quality model
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 nanochat-public-health/
@@ -178,48 +161,46 @@ nanochat-public-health/
 │   ├── generate_surveillance_dataset.py  # Dataset generator
 │   ├── surveillance_sft.py              # Training pipeline
 │   ├── surveillance_eval.py             # Evaluation
-│   ├── surveillance_chat_cpu.py         # Chat (CPU) ⭐
+│   ├── surveillance_chat_cpu.py         # Chat (CPU)
 │   └── test_surveillance_setup.py       # Verification
 ├── tasks/
 │   └── surveillance.py             # Task loader
-├── NEXT_STEPS.md                   # Quick start guide ⭐
-├── CLOUD_TRAINING_GUIDE.md         # Training instructions
-└── ... (see Documentation section)
+└── README.md                       # This file
 ```
 
 ---
 
-## ⚠️ Important Disclaimers
+## Important Disclaimers
 
-**Medical Safety:**
+Medical Safety:
 - This system provides **decision support** for public health professionals
 - **Not a replacement** for professional judgment or official protocols
 - Always **verify with official sources** (CDC, WHO, local health departments)
 - **Consult senior epidemiologists** for critical public health decisions
 
-**Data Privacy:**
+Data Privacy:
 - Never train on identifiable patient data (HIPAA/GDPR violations)
 - Use only de-identified, synthetic, or public surveillance data
 
 ---
 
-## 🤝 Based on nanochat
+## Based on nanochat
 
 This project is built on [nanochat](https://github.com/karpathy/nanochat) by Andrej Karpathy.
 
-**Original nanochat:**
+Original nanochat:
 > The best ChatGPT that $100 can buy.
 
 A full-stack implementation of an LLM like ChatGPT in a single, clean, minimal, hackable codebase. Includes tokenization, pretraining, finetuning, evaluation, inference, and web serving.
 
-**Our modifications:**
-- ✅ Added 5,000 public health surveillance training examples
-- ✅ Created specialized training pipeline
-- ✅ Built comprehensive evaluation system
-- ✅ Added CPU-compatible inference
-- ✅ Wrote extensive documentation for public health use
+Our modifications:
+- Added 5,000 public health surveillance training examples
+- Created specialized training pipeline
+- Built comprehensive evaluation system
+- Added CPU-compatible inference
+- Wrote extensive documentation for public health use
 
-**Syncing with upstream:**
+Syncing with upstream:
 ```bash
 # We maintain connection to original nanochat
 git fetch upstream
@@ -228,17 +209,9 @@ git merge upstream/master  # Pull latest updates from Karpathy's repo
 
 ---
 
-## 📖 Training Your Model
+## Training Your Model
 
-**Step-by-step:**
-
-1. **Read [NEXT_STEPS.md](NEXT_STEPS.md)** to choose your approach
-2. **Follow [CLOUD_TRAINING_GUIDE.md](CLOUD_TRAINING_GUIDE.md)** for detailed instructions
-3. **Train the model** (15-100 hours depending on GPU)
-4. **Evaluate** with `python -m scripts.surveillance_eval`
-5. **Use** with `python -m scripts.surveillance_chat_cpu`
-
-**Commands:**
+Commands:
 ```bash
 # Verify setup
 python -m scripts.test_surveillance_setup
@@ -255,30 +228,30 @@ python -m scripts.surveillance_chat_cpu --source sft --model_tag d26-surveillanc
 
 ---
 
-## 🎯 Status
+## Status
 
 | Component | Status |
 |-----------|--------|
-| Dataset (5,000 examples) | ✅ Complete |
-| Training pipeline | ✅ Ready |
-| Evaluation system | ✅ Ready |
-| CPU chat interface | ✅ Ready |
-| Documentation | ✅ Complete |
-| **Trained model** | ⏳ Awaiting GPU training |
+| Dataset (5,000 examples) | Complete |
+| Training pipeline | Ready |
+| Evaluation system | Ready |
+| CPU chat interface | Ready |
+| Documentation | Complete |
+| Trained model | Awaiting GPU training |
 
-**All tests passing:** ✅
+All tests passing
 
 ---
 
-## 📊 Expected Results
+## Expected Results
 
 After training, your model will achieve:
-- **ROUGE-1:** > 0.3 (text similarity)
-- **Concept Coverage:** > 0.5 (epidemiological terminology)
-- **Structure Quality:** > 0.7 (professional formatting)
-- **Actionability:** > 0.6 (recommendations included)
+- ROUGE-1: > 0.3 (text similarity)
+- Concept Coverage: > 0.5 (epidemiological terminology)
+- Structure Quality: > 0.7 (professional formatting)
+- Actionability: > 0.6 (recommendations included)
 
-**Applications:**
+Applications:
 - Outbreak investigation support
 - Risk assessment automation
 - Surveillance report generation
@@ -287,43 +260,35 @@ After training, your model will achieve:
 
 ---
 
-## 🌟 Why nanochat-public-health?
+## Why nanochat-public-health?
 
-**vs. ChatGPT:**
-- ✅ Specialized for surveillance (not general knowledge)
-- ✅ Fully controllable and customizable
-- ✅ Can run locally (privacy-preserving)
-- ✅ Much lower cost ($300 vs. millions to train)
+vs. ChatGPT:
+- Specialized for surveillance (not general knowledge)
+- Fully controllable and customizable
+- Can run locally (privacy-preserving)
+- Much lower cost ($300 vs. millions to train)
 
-**vs. General Medical AI:**
-- ✅ Population-level focus (not individual patient care)
-- ✅ Public health terminology and frameworks
-- ✅ Actionable recommendations for interventions
-- ✅ Surveillance-specific evaluation metrics
+vs. General Medical AI:
+- Population-level focus (not individual patient care)
+- Public health terminology and frameworks
+- Actionable recommendations for interventions
+- Surveillance-specific evaluation metrics
 
 ---
 
-## 📜 License
+## License
 
 MIT License (same as original nanochat)
 
 ---
 
-## 🙏 Credits
+## Credits
 
-- **Original nanochat:** [Andrej Karpathy](https://github.com/karpathy/nanochat)
-- **Surveillance specialization:** [Bryan Tegomoh](https://github.com/BryanTegomoh)
-
----
-
-## 📞 Support
-
-- **Issues:** https://github.com/BryanTegomoh/nanochat-public-health/issues
-- **Documentation:** See [NEXT_STEPS.md](NEXT_STEPS.md)
-- **Troubleshooting:** See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+- Original nanochat: [Andrej Karpathy](https://github.com/karpathy/nanochat)
+- Surveillance specialization: [Bryan Tegomoh](https://github.com/BryanTegomoh)
 
 ---
 
-**Ready to train your public health surveillance AI?** 🚀
+## Support
 
-**[START HERE → NEXT_STEPS.md](NEXT_STEPS.md)**
+Issues: https://github.com/BryanTegomoh/nanochat-public-health/issues
